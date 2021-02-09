@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
-//新增部份
+//新增problem entity
 use App\Entity\Problem;
 
 /**
@@ -379,7 +379,7 @@ class PublicController extends BaseController
     //新增頁面
      
     /**
-     * @Route("public_index_test", name="public_index_test")
+     * @Route("/public_homepage", name="public_homepage")
 
      */
 
@@ -416,7 +416,7 @@ class PublicController extends BaseController
 
        
 
-        return $this->render('public/index_test.html.twig', [
+        return $this->render('public/homepage.html.twig', [
             'problems' => $problems,
             'showLimits' => $showLimits,
             'defaultMemoryLimit' => $defaultMemoryLimit,
